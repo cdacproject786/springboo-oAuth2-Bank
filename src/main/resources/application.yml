@@ -1,0 +1,22 @@
+server:
+  port: 8050
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/account?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: 123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 279913789395-5maq1f9be3diu88laqibj1upre2a0a2u.apps.googleusercontent.com
+            client-secret: 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
